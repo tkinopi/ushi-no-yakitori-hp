@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;800&display=swap');
+:root{--bg:#0C0905;--bg2:#161008;--accent:#E85820;--accent2:#c94a18;--text:#F2EDE7;--text-muted:#9A8A7A;--border:#2A1F15;--card:#1A1208;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background-color:var(--bg);color:var(--text);font-family:'Shippori Mincho B1','Yu Mincho',serif;-webkit-font-smoothing:antialiased;}
+.site-header-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+.site-nav{display:flex;gap:0;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+.grid-2-menu{display:grid;grid-template-columns:1fr 1fr;gap:1px;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.info-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
+.main-pad{padding:0 32px 80px;}
+.hero-title{font-size:56px;font-weight:800;line-height:1.15;letter-spacing:0.03em;}
+.section-title{font-size:28px;}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr;}.hero-title{font-size:40px;}}
+@media(max-width:640px){
+  .site-header-inner{height:auto;flex-direction:column;align-items:flex-start;padding:12px 0 0;}
+  .site-nav{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .site-nav::-webkit-scrollbar{display:none;}
+  .site-nav button{flex-shrink:0;}
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-deco{display:none;}
+  .grid-3{grid-template-columns:1fr;}
+  .grid-2{grid-template-columns:1fr;gap:20px;}
+  .grid-2-menu{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .info-bar{flex-direction:column;align-items:flex-start;}
+  .main-pad{padding:0 16px 60px;}
+  .hero-title{font-size:32px;}
+  .section-title{font-size:22px;}
+  .hero-pad{padding:40px 24px !important;}
+}
